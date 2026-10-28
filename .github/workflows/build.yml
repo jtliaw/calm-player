@@ -16,10 +16,23 @@ jobs:
         with:
           flutter-version: '3.29.3'
           channel: stable
+      - name: Restore signing key
+        env:
+          KS: ${{ secrets.DEBUG_KEYSTORE_B64 }}
+        run: |
+          mkdir -p ~/.android
+          echo "$KS" | base64 -d > ~/.android/debug.keystore
       - run: flutter create --org com.calm --project-name calm_player --platforms=android .
       - run: python3 tools/patch_android.py
+      - name: Disable minify
+        run: |
+          if [ -f android/app/build.gradle.kts ]; then
+            printf '\nandroid {\n    buildTypes {\n        getByName("release") {\n            isMinifyEnabled = false\n            isShrinkResources = false\n        }\n    }\n}\n' >> android/app/build.gradle.kts
+          else
+            printf '\nandroid {\n    buildTypes {\n        release {\n            minifyEnabled false\n            shrinkResources false\n        }\n    }\n}\n' >> android/app/build.gradle
+          fi
       - run: flutter pub get
-      - run: flutter build apk --release --no-shrink --target-platform android-arm64
+      - run: flutter build apk --release --no-shrink --build-number=${{ github.run_number }} --target-platform android-arm64
       - uses: actions/upload-artifact@v4
         with:
           name: calm-player-apk
