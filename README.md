@@ -1,3 +1,4 @@
+https://github.com/jtliaw/calm-player/blob/main/icons/ic_xxhdpi.png
 # 静心音乐 · Calm Music
 
 **中文** | [English](#english)
