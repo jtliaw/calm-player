@@ -1,3 +1,5 @@
+<div align="center">
+
 <img width="128" height="128" alt="app_icon" src="https://github.com/user-attachments/assets/0345187d-043a-4cd7-a0f8-e25acf32a41e" />
 
 # 静心音乐 · Calm Music
