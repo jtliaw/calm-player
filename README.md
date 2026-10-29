@@ -37,12 +37,8 @@
 ## 安全说明
 
 本软件已在 VirusTotal 扫描，**61 个杀毒引擎均未检出威胁**。
+你可以自己到https://www.virustotal.com/gui/home/upload
 
-- 扫描日期：`[填写日期]`
-- 文件 SHA-256：`[填写校验码]`
-- 扫描报告：`[粘贴 VirusTotal 链接]`
-
-请注意：扫描结果只对应上面这一个文件。每次重新打包，文件校验码都会不同。你可以用 `sha256sum app-release.apk` 核对下载的文件是否一致。本项目代码完全公开，你也可以自行审查，或用自己的 GitHub 账号按源码重新打包。
 
 ## 使用声明
 
@@ -51,13 +47,6 @@
 - 软件按"现状"提供，作者不对使用后果负责。
 - 请勿上传或分发下载得到的音乐文件。
 
-## 使用的开源项目
-
-[yt-dlp](https://github.com/yt-dlp/yt-dlp)、[youtubedl-android](https://github.com/yausername/youtubedl-android)、[FFmpeg](https://ffmpeg.org/)、[Flutter](https://flutter.dev/)、[just_audio](https://pub.dev/packages/just_audio)。
-
-## 许可证
-
-GPL-3.0（因为使用了 GPL-3.0 许可的 youtubedl-android）。
 
 ---
 
@@ -98,11 +87,7 @@ The app does not upload any of your files or information.
 
 This app was scanned on VirusTotal: **0 of 61 engines flagged it**.
 
-- Scan date: `[fill in]`
-- File SHA-256: `[fill in]`
-- Report: `[paste VirusTotal link]`
-
-The result applies only to that exact file. Every rebuild produces a different checksum; verify yours with `sha256sum app-release.apk`. The source code is public, so you can review it or build the APK yourself.
+You can go to (https://www.virustotal.com/gui/home/upload)
 
 ## Disclaimer
 
@@ -110,11 +95,3 @@ The result applies only to that exact file. Every rebuild produces a different c
 - Only download content you have the right to download. You are responsible for complying with copyright law and YouTube's Terms of Service.
 - Provided "as is", without warranty of any kind.
 - Please do not upload or redistribute downloaded music.
-
-## Built with
-
-[yt-dlp](https://github.com/yt-dlp/yt-dlp), [youtubedl-android](https://github.com/yausername/youtubedl-android), [FFmpeg](https://ffmpeg.org/), [Flutter](https://flutter.dev/), [just_audio](https://pub.dev/packages/just_audio).
-
-## License
-
-GPL-3.0 (required because youtubedl-android is GPL-3.0 licensed).
